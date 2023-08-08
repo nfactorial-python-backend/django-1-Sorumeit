@@ -18,12 +18,15 @@ def calc( request , first : int , operation : str , second : int ):
 	if ( operation == "mult" ):
 	    first *= second
         return HttpResponse( first )
+
 	if ( operation == "div" ):
 		first /= second
         return HttpResponse( first )
+
 	if ( operation == "add" ):
         first += second
         return HttpResponse( first )	
+	
     if ( operation == "sub" ):
 	    first -= second
         return HttpResponse( first )
