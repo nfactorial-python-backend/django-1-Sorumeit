@@ -25,4 +25,4 @@ def calc( request , first : int , operation : str , second : int ):
 		first += second	
 
 	    
-	return ( first )
+	return HttpResponse( first )
