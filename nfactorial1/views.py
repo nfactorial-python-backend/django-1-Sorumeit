@@ -19,10 +19,10 @@ def calc( request , first : int , operation : str , second : int ):
 	    first *= second
 	elif ( operation == "div" ):
 		first /= second
+	elif ( operation == "sub" ):
+		first -= second
 	elif ( operation == "add" ):
-		first += second		
-    else:
-        first -= second
+		first += second	
 
 	    
 	return ( first )
