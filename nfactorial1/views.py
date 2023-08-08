@@ -15,11 +15,15 @@ def pal(request , word : str ):
 	return HttpResponse( word == word[::-1] )
 
 def calc( request , first : int , operation : str , second : int ):
-	if ( operation == "add" ):
-        return HttpResponse( first + second )	
-    if ( operation == "sub" ):
-	    return HttpResponse( first - second )
 	if ( operation == "mult" ):
-	    return HttpResponse( first * second )
+	    first *= second
+        return HttpResponse( first )
 	if ( operation == "div" ):
-        return HttpResponse( first / second )
+		first /= second
+        return HttpResponse( first )
+	if ( operation == "add" ):
+        first += second
+        return HttpResponse( first )	
+    if ( operation == "sub" ):
+	    first -= second
+        return HttpResponse( first )
