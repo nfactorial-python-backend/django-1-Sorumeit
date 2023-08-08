@@ -11,5 +11,4 @@ def up( request , text : str ):
 	return HttpResponse( text.upper() )
 
 def pal( request , word : str ):
-	new = word
-	return HttpResponse( word == new.reverse(  ) )
+	return HttpResponse( word == word[::-1] )
