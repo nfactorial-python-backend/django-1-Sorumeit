@@ -17,13 +17,12 @@ def pal(request , word : str ):
 def calc( request , first : int , operation : str , second : int ):
 	if ( operation == "mult" ):
 	    first *= second
-
 	elif ( operation == "div" ):
 		first /= second
-
 	elif ( operation == "add" ):
-        first += second	
-	
-    elif ( operation == "sub" ):
-	    first -= second
+		first += second		
+    else:
+        first -= second
+
+	    
 	return ( first )
