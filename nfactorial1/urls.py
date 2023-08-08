@@ -4,5 +4,6 @@ urlpatterns = [
 	path('', views.home, name='blog-home'),
     path('<int:first>/add/<int:second>/' , views.sum , name = 'blog.sum' ),
     path('transform/<str:text>/' , views.up , name = 'blog.upper' ),
-    path('check/<str:word>/' , views.pal , name = 'blog.pol' )
+    path('check/<str:word>/' , views.pal , name = 'blog.pol' ),
+    path('calc/<int:first>/<str:operation>/<int:second>/' , views.calc , name = 'blog.calc' )
 ]
